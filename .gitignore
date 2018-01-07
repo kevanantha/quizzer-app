@@ -1,0 +1,181 @@
+
+# Created by https://www.gitignore.io/api/webstorm,synopsysvcs,webstorm+iml,webstorm+all
+
+### SynopsysVCS ###
+# Waveform formats
+*.vcd
+*.vpd
+*.evcd
+*.fsdb
+
+# Default name of the simulation executable.  A different name can be
+# specified with this switch (the associated daidir database name is
+# also taken from here):  -o <path>/<filename>
+simv
+
+# Generated for Verilog and VHDL top configs
+simv.daidir/
+simv.db.dir/
+
+# Infrastructure necessary to co-simulate SystemC models with
+# Verilog/VHDL models.  An alternate directory may be specified with this
+# switch:  -Mdir=<directory_path>
+csrc/
+
+# Log file - the following switch allows to specify the file that will be
+# used to write all messages from simulation:  -l <filename>
+*.log
+
+# Coverage results (generated with urg) and database location.  The
+# following switch can also be used:  urg -dir <coverage_directory>.vdb
+simv.vdb/
+urgReport/
+
+# DVE and UCLI related files.
+DVEfiles/
+ucli.key
+
+# When the design is elaborated for DirectC, the following file is created
+# with declarations for C/C++ functions.
+vc_hdrs.h
+
+### WebStorm ###
+# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and Webstorm
+# Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
+
+# User-specific stuff:
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/dictionaries
+
+# Sensitive or high-churn files:
+.idea/**/dataSources/
+.idea/**/dataSources.ids
+.idea/**/dataSources.xml
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dynamic.xml
+.idea/**/uiDesigner.xml
+
+# Gradle:
+.idea/**/gradle.xml
+.idea/**/libraries
+
+# CMake
+cmake-build-debug/
+
+# Mongo Explorer plugin:
+.idea/**/mongoSettings.xml
+
+## File-based project format:
+*.iws
+
+## Plugin-specific files:
+
+# IntelliJ
+/out/
+
+# mpeltonen/sbt-idea plugin
+.idea_modules/
+
+# JIRA plugin
+atlassian-ide-plugin.xml
+
+# Cursive Clojure plugin
+.idea/replstate.xml
+
+# Ruby plugin and RubyMine
+/.rakeTasks
+
+# Crashlytics plugin (for Android Studio and IntelliJ)
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
+
+### WebStorm Patch ###
+# Comment Reason: https://github.com/joeblau/gitignore.io/issues/186#issuecomment-215987721
+
+# *.iml
+# modules.xml
+# .idea/misc.xml
+# *.ipr
+
+# Sonarlint plugin
+.idea/sonarlint
+
+### WebStorm+all ###
+# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and Webstorm
+# Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
+
+# User-specific stuff:
+
+# Sensitive or high-churn files:
+
+# Gradle:
+
+# CMake
+
+# Mongo Explorer plugin:
+
+## File-based project format:
+
+## Plugin-specific files:
+
+# IntelliJ
+
+# mpeltonen/sbt-idea plugin
+
+# JIRA plugin
+
+# Cursive Clojure plugin
+
+# Ruby plugin and RubyMine
+
+# Crashlytics plugin (for Android Studio and IntelliJ)
+
+### WebStorm+all Patch ###
+# Ignores the whole idea folder
+# See https://github.com/joeblau/gitignore.io/issues/186 and https://github.com/joeblau/gitignore.io/issues/360
+
+.idea/
+
+### WebStorm+iml ###
+# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and Webstorm
+# Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
+
+# User-specific stuff:
+
+# Sensitive or high-churn files:
+
+# Gradle:
+
+# CMake
+
+# Mongo Explorer plugin:
+
+## File-based project format:
+
+## Plugin-specific files:
+
+# IntelliJ
+
+# mpeltonen/sbt-idea plugin
+
+# JIRA plugin
+
+# Cursive Clojure plugin
+
+# Ruby plugin and RubyMine
+
+# Crashlytics plugin (for Android Studio and IntelliJ)
+
+### WebStorm+iml Patch ###
+# Reason: https://github.com/joeblau/gitignore.io/issues/186#issuecomment-249601023
+
+*.iml
+modules.xml
+.idea/misc.xml
+*.ipr
+
+# End of https://www.gitignore.io/api/webstorm,synopsysvcs,webstorm+iml,webstorm+all

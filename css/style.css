@@ -40,6 +40,38 @@ body {
     color: #fff;
 }
 
+.panel_two .wrapper,
+.panel_three .wrapper,
+.panel_four .wrapper,
+.panel_five .wrapper {
+    display: none;
+}
+
+/* Questions */
+.options {
+    height: 200px;
+}
+.options div {
+    /*display: none;*/
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: #3f51b5;
+    -webkit-transition: 0.2s ease;
+    -moz-transition: 0.2s ease;
+    -ms-transition: 0.2s ease;
+    -o-transition: 0.2s ease;
+    transition: 0.2s ease;
+}
+
+.options div.active {
+    color: #007fff;
+    background: #313131;
+}
+
+.next_question {
+    cursor: pointer;
+}
+
 /* Progress Bar And Error */
 .error {
     position: fixed;

@@ -52,7 +52,7 @@ body {
     height: 200px;
 }
 .options div {
-    /*display: none;*/
+    display: none;
     margin-bottom: 15px;
     font-size: 20px;
     color: #3f51b5;

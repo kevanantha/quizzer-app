@@ -1,6 +1,11 @@
 $(document).ready(function() {
 
     (function startQuiz() {
+
+        this.settings = {
+            results:[]
+        };
+
        this.loadQuiz = function() {
            $('.panel_one h1').show("drop", 500, function() {
                 $('.start_quiz').addClass("started", 500);
@@ -8,6 +13,7 @@ $(document).ready(function() {
 
            $(".start_quiz").on("click", function() {
                showPanel(1)
+               listenNext();
            });
        };
 
@@ -27,7 +33,62 @@ $(document).ready(function() {
        this.showNext = function (next) {
            var wrapper = next.find('.wrapper');
            wrapper.fadeIn('500', function () {
+               manageOptions(next)
+           });
+       };
 
+       this.manageOptions = function(next) {
+           var options = next.find('.options');
+           var childrens = options.find('div');
+           var counter = 0;
+
+           childrens.each(function(i, el) {
+               $(el).delay(counter).fadeIn(300);
+               counter += 500;
+           });
+
+           childrens.on("click", function() {
+               childrens.removeClass('active');
+               next.addClass('valid');
+               $(this).addClass('active');
+           });
+       };
+
+       this.listenNext = function () {
+           $('.next_question').on("click", function() {
+               var next = $(this).data("next");
+
+               if(validateSelection($(this))) {
+                   showPanel(next);
+                   showProgressAndStore(next);
+               }
+           });
+       };
+
+       this.validateSelection = function ($this) {
+           var parent = $this.parents().eq(1);
+
+           /*console.log(parents)*/
+
+           if (parent.hasClass('valid')) {
+               return true;
+           } else {
+               $('.error').fadeIn("300", function () {
+                   $(this).delay(1000).fadeOut('300');
+               });
+               return false;
+           }
+       };
+
+       this.showProgressAndStore = function (panel) {
+           $('.progress .bar').animate({"width":"+=25%"}, 500);
+
+           var options = $('div[data-panel="'+ (panel - 1) +'"]').find('.options');
+           options.find('div').each(function (i, el) {
+               if ($(this).hasClass('active')) {
+                   settings.results.push($(this).text());
+                   console.log(settings.results);
+               }
            });
        };
 
